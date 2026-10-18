@@ -16,3 +16,9 @@ app = FastAPI(
 @app.get("/")
 def boas_vindas():
     return{"mensagem": "Bem-vindos á aula API 02"}
+
+# Chamado o @app por meio de uma funcão que possui uma variável. 
+
+@app.get("/saudacao/{nome}")
+def saudacao(nome: str):
+    return{"mensagem": f"Olá {nome}! Seja bem-vindo(a)"}
